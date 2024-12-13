@@ -9,7 +9,7 @@ const printCompilationMessage = require('./compilation.config.js');
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:8001/",
+    publicPath: "https://micro-auth-frontnd.vercel.app/",
   },
 
   resolve: {
@@ -67,7 +67,6 @@ module.exports = (_, argv) => ({
       remotes: {},
       exposes: {
         "./App":"./src/App.tsx",
-        "./Login":"./src/Login.tsx",
         "./store":"./src/redux/store.ts",
         "./authApi":"./src/redux/authApi.ts",
         "./authSlice":"./src/redux/authSlice.ts",
