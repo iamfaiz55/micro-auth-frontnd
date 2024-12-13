@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'animate.css';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tailwind Custom Sprinkle Effect */
+.sprinkle-effect {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #277edb;
+  /* Light Blue */
+  animation: sprinkle 1.5s ease-out forwards;
+}
+
+@keyframes sprinkle {
+  0% {
+    transform: scale(0.8);
+    opacity: 300;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 10;
+  }
+}
