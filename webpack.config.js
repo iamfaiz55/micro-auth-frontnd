@@ -71,17 +71,7 @@ module.exports = (_, argv) => ({
         "./authApi":"./src/redux/authApi.ts",
         "./authSlice":"./src/redux/authSlice.ts",
       },
-      shared: {
-        ...deps,
-        react: {
-          singleton: true,
-          requiredVersion: deps.react,
-        },
-        "react-dom": {
-          singleton: true,
-          requiredVersion: deps["react-dom"],
-        },
-      },
+      shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
